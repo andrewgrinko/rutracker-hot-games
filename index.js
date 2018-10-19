@@ -10,7 +10,7 @@ const FILE_NAME = "./saved_feed.json";
 process.setMaxListeners(0);
 
 // every hour
-schedule.scheduleJob("* * * * * *", () => {
+schedule.scheduleJob("0 * * * * *", () => {
   processFeed().catch(e => {
     console.error("error: ", { message: e.message, stack: e.stack });
   });
